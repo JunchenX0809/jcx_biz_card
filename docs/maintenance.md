@@ -5,6 +5,9 @@ The page publishes directly from the root of `main` at
 Keep `index.html` at the root and asset links relative. The stable page URL is
 also encoded in `assets/qr/website.svg` for printing on a physical card.
 `assets/qr/website.png` is a 1032-pixel copy for easy preview and sharing.
+The orb's scroll fade lives in `assets/js/motion.js`; the invitation button's
+moving cyan glow lives in `assets/css/styles.css`. Keep both decorative and honor
+the existing reduced-motion setting when changing either effect.
 
 ## Updating contact details
 
@@ -49,7 +52,8 @@ Preview the site at the project path:
 ```
 
 Open `http://localhost:4173/jcx_biz_card/` and check a narrow phone width,
-the HubSpot invitation, all three contact actions, and both QR codes. Test the
+the scroll response, the reduced-motion setting, the HubSpot invitation, all
+three contact actions, and both QR codes. Test the
 vCard download and Contacts import on a real phone. After you push, check the live page and
 `/version.txt` before writing its stable URL to an NFC card or printing a QR.
 

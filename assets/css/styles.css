@@ -87,6 +87,7 @@ a {
   top: 54px;
   border-radius: 50%;
   opacity: .93;
+  will-change: opacity;
 }
 
 .orbit-ring {
@@ -222,9 +223,11 @@ a {
 }
 
 .invitation-link {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
-  gap: 16px;
   min-height: 44px;
   padding: 0 14px;
   border: 1px solid rgba(70,236,231,.75);
@@ -237,9 +240,28 @@ a {
   transition: background .2s ease,color .2s ease;
 }
 
+.invitation-link::before {
+  position: absolute;
+  inset: 0 auto 0 -80%;
+  width: 180%;
+  content: "";
+  background: linear-gradient(100deg,transparent 34%,rgba(70,236,231,.08) 40%,rgba(70,236,231,.38) 50%,rgba(70,236,231,.08) 60%,transparent 66%);
+  filter: blur(10px);
+  pointer-events: none;
+  animation: invitation-glow 4.8s ease-in-out infinite alternate;
+}
+
+.invitation-link span {
+  position: relative;
+}
+
 .invitation-link:hover {
   background: var(--cyan);
   color: var(--navy);
+}
+
+.invitation-link:hover::before {
+  opacity: 0;
 }
 
 .invitation-link:focus-visible {
@@ -247,9 +269,10 @@ a {
   outline-offset: 3px;
 }
 
-.invitation-link span:last-child {
-  font-size: 18px;
-  font-weight: 400;
+@keyframes invitation-glow {
+  to {
+    transform: translateX(45%);
+  }
 }
 
 .invitation-note {
@@ -422,6 +445,7 @@ a {
   *::before,
   *::after {
     scroll-behavior: auto!important;
+    animation: none!important;
     transition: none!important;
   }
 }
