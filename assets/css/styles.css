@@ -131,7 +131,7 @@ a {
 .intro {
   position: relative;
   z-index: 1;
-  margin-top: 135px;
+  margin-top: 80px;
 }
 
 .kicker {
@@ -148,7 +148,7 @@ a {
   letter-spacing: -.07em;
   font-size: clamp(58px,13vw,89px);
   line-height: .94;
-  margin: 0 0 28px;
+  margin: 0 0 24px;
 }
 
 .intro h1 em {
@@ -162,7 +162,7 @@ a {
   width: 83px;
   height: 1px;
   background: rgba(255,255,255,.34);
-  margin: 0 0 22px;
+  margin: 0 0 18px;
 }
 
 .identity-rule span {
@@ -175,7 +175,7 @@ a {
   font-family: Outfit,sans-serif;
   font-size: 21px;
   letter-spacing: -.015em;
-  margin: 0 0 8px;
+  margin: 0 0 4px;
 }
 
 .role span {
@@ -203,12 +203,60 @@ a {
   color: var(--cyan);
 }
 
-.description {
-  max-width: 250px;
-  margin: 0;
-  color: #c7d2df;
+.invitation {
+  max-width: 350px;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-left: 2px solid rgba(70,236,231,.58);
+  border-radius: 0 12px 12px 0;
+  background: rgba(17,28,57,.28);
+}
+
+.invitation-heading {
+  margin: 0 0 12px;
+  font-family: Outfit,"DM Sans",sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+
+.invitation-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(70,236,231,.75);
+  border-radius: 9px;
+  background: rgba(70,236,231,.08);
+  color: #b9f8f5;
   font-size: 14px;
-  line-height: 1.55;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease,color .2s ease;
+}
+
+.invitation-link:hover {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+.invitation-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.invitation-link span:last-child {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.invitation-note {
+  margin: 8px 0 0;
+  color: #c7d2df;
+  font-size: 11px;
+  line-height: 1.4;
 }
 
 .connection {
@@ -338,7 +386,7 @@ a {
     padding: 30px 36px 26px;
   }
   .intro {
-    margin-top: 190px;
+    margin-top: 100px;
   }
   .orbit {
     right: -125px;
@@ -358,7 +406,7 @@ a {
     padding: 23px;
   }
   .intro {
-    margin-top: 130px;
+    margin-top: 68px;
   }
   .orbit {
     right: -225px;

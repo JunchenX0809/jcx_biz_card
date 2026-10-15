@@ -31,6 +31,15 @@ also encoded in `assets/qr/website.svg` for printing on a physical card.
 4. Update `version.txt` once for the whole release. Git history records the
    exact changes; `version.txt` labels the published state.
 
+## HubSpot invitation
+
+The invitation inside the navy card links to a
+[shared HubSpot form](https://rnfhm.share.hsforms.com/2QL-SKF97Qna9dIP4tbCl-w).
+The form's fields and confirmation message are managed in HubSpot, outside
+this repository. Keep the invitation wording aligned with the live form and
+check the link on a phone when either changes. The team plans to add an
+optional question about what the visitor would like to discuss.
+
 ## Before handing out a card
 
 Preview the site at the project path:
@@ -40,8 +49,8 @@ Preview the site at the project path:
 ```
 
 Open `http://localhost:4173/jcx_biz_card/` and check a narrow phone width,
-all three contact actions, and both QR codes. Test the vCard download and
-Contacts import on a real phone. After you push, check the live page and
+the HubSpot invitation, all three contact actions, and both QR codes. Test the
+vCard download and Contacts import on a real phone. After you push, check the live page and
 `/version.txt` before writing its stable URL to an NFC card or printing a QR.
 
 The team-supplied logo is `assets/icons/bankuity-logo-landscape-solid-dark.svg`.
