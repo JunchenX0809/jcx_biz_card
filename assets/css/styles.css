@@ -183,6 +183,12 @@ a {
   color: #bec8d5;
 }
 
+.role .role-affiliation {
+  display: inline-block;
+  white-space: nowrap;
+  color: #fff;
+}
+
 .role a {
   display: inline-flex;
   align-items: center;
