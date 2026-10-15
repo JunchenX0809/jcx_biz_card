@@ -1,3 +1,4 @@
-# Junchen Xiong's digital business card
+# Bankuity digital business cards
 
-[Open the live webpage](https://junchenx0809.github.io/jcx_biz_card/)
+- [Junchen Xiong](https://bankuity-cards.pages.dev/junchen-xiong/)
+- [Sven Shi](https://bankuity-cards.pages.dev/sven-shi/)
