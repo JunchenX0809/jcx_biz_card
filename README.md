@@ -4,3 +4,4 @@
 - [Sven Shi](https://bankuity-cards.pages.dev/sven-shi/)
 - [Michael Luxenberg](https://bankuity-cards.pages.dev/michael-luxenberg/)
 - [Don Amoruso](https://bankuity-cards.pages.dev/don-amoruso/)
+- [Dave Spiler](https://bankuity-cards.pages.dev/dave-spiler/)

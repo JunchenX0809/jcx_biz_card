@@ -11,6 +11,8 @@ Michael's card is `michael-luxenberg/index.html` at
 [bankuity-cards.pages.dev/michael-luxenberg/](https://bankuity-cards.pages.dev/michael-luxenberg/).
 Don's card is `don-amoruso/index.html` at
 [bankuity-cards.pages.dev/don-amoruso/](https://bankuity-cards.pages.dev/don-amoruso/).
+Dave's card is `dave-spiler/index.html` at
+[bankuity-cards.pages.dev/dave-spiler/](https://bankuity-cards.pages.dev/dave-spiler/).
 Cloudflare's `_redirects` rule sends the root URL there, while the root
 `index.html` provides a fallback for GitHub Pages. The root can become a team
 directory later without changing personal card URLs.
@@ -41,7 +43,8 @@ needed. Push `main` to deploy the added card alongside the existing ones.
    text, and vCard download filename for the same changes.
 2. Edit the matching vCard (`assets/contact/contact.vcf` for Junchen,
    `sven-shi/contact.vcf` for Sven, `michael-luxenberg/contact.vcf` for
-   Michael, or `don-amoruso/contact.vcf` for Don). Its lines must end with CRLF;
+   Michael, `don-amoruso/contact.vcf` for Don, or
+   `dave-spiler/contact.vcf` for Dave). Its lines must end with CRLF;
    `.gitattributes` preserves those bytes when Git checks out the file.
    Keep the file path stable so existing links continue to work. The `NOTE`
    field on Michael's and Don's vCards supplies the iOS Contacts note;
@@ -62,6 +65,9 @@ needed. Push `main` to deploy the added card alongside the existing ones.
    swift scripts/generate_qr.swift https://bankuity-cards.pages.dev/don-amoruso/ don-amoruso/website.svg
    sips -s format png -z 1032 1032 don-amoruso/website.svg --out don-amoruso/website.png
    swift scripts/generate_qr.swift https://www.linkedin.com/in/donamoruso/ don-amoruso/linkedin.svg
+   swift scripts/generate_qr.swift https://bankuity-cards.pages.dev/dave-spiler/ dave-spiler/website.svg
+   sips -s format png -z 1032 1032 dave-spiler/website.svg --out dave-spiler/website.png
+   swift scripts/generate_qr.swift https://www.linkedin.com/in/davespiler/ dave-spiler/linkedin.svg
    ```
 
    Each PNG size is an exact 24-pixel multiple of its QR module count,
@@ -91,10 +97,14 @@ Preview the site at the project path:
 Open `http://localhost:4173/jcx_biz_card/junchen-xiong/`,
 `http://localhost:4173/jcx_biz_card/sven-shi/`,
 `http://localhost:4173/jcx_biz_card/michael-luxenberg/`, and
-`http://localhost:4173/jcx_biz_card/don-amoruso/`. Check a narrow phone width,
+`http://localhost:4173/jcx_biz_card/don-amoruso/`, and
+`http://localhost:4173/jcx_biz_card/dave-spiler/`. Check a narrow phone width,
 the scroll response, the reduced-motion setting, the HubSpot invitation, all
 three contact actions, and both QR codes. Test the
-vCard download and Contacts import on a real phone. After you push, check the live page and
+vCard download and Contacts import on both iPhone and Android. On Android,
+Google Contacts can import the downloaded `.vcf` with its **Import from file** command
+if opening the download does not offer an import prompt.
+After you push, check the live page and
 `/version.txt` before writing its direct URL to an NFC card or printing a QR.
 
 The team-supplied logo is `assets/icons/bankuity-logo-landscape-solid-dark.svg`.
