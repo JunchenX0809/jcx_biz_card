@@ -7,6 +7,8 @@ is `junchen-xiong/index.html` at
 [bankuity-cards.pages.dev/junchen-xiong/](https://bankuity-cards.pages.dev/junchen-xiong/).
 Sven's card is `sven-shi/index.html` at
 [bankuity-cards.pages.dev/sven-shi/](https://bankuity-cards.pages.dev/sven-shi/).
+Michael's card is `michael-luxenberg/index.html` at
+[bankuity-cards.pages.dev/michael-luxenberg/](https://bankuity-cards.pages.dev/michael-luxenberg/).
 Cloudflare's `_redirects` rule sends the root URL there, while the root
 `index.html` provides a fallback for GitHub Pages. The root can become a team
 directory later without changing personal card URLs.
@@ -35,8 +37,9 @@ needed. Push `main` to deploy the added card alongside the existing ones.
 1. Edit the name, role, employer, email, LinkedIn, and other links in the
    relevant person's `index.html`. Check its title, description, Open Graph
    text, and vCard download filename for the same changes.
-2. Edit the matching vCard (`assets/contact/contact.vcf` for Junchen or
-   `sven-shi/contact.vcf` for Sven). Its lines must end with CRLF;
+2. Edit the matching vCard (`assets/contact/contact.vcf` for Junchen,
+   `sven-shi/contact.vcf` for Sven, or `michael-luxenberg/contact.vcf` for
+   Michael). Its lines must end with CRLF;
    `.gitattributes` preserves those bytes when Git checks out the file.
    Keep the file path stable so existing links continue to work.
 3. If a QR destination changes, regenerate its SVG from the repository root
@@ -49,6 +52,9 @@ needed. Push `main` to deploy the added card alongside the existing ones.
    swift scripts/generate_qr.swift https://bankuity-cards.pages.dev/sven-shi/ sven-shi/website.svg
    sips -s format png -z 936 936 sven-shi/website.svg --out sven-shi/website.png
    swift scripts/generate_qr.swift https://www.linkedin.com/in/wen-shi-87004874/ sven-shi/linkedin.svg
+   swift scripts/generate_qr.swift https://bankuity-cards.pages.dev/michael-luxenberg/ michael-luxenberg/website.svg
+   sips -s format png -z 1032 1032 michael-luxenberg/website.svg --out michael-luxenberg/website.png
+   swift scripts/generate_qr.swift https://www.linkedin.com/in/michael-luxenberg-a2091/ michael-luxenberg/linkedin.svg
    ```
 
    Each PNG size is an exact 24-pixel multiple of its QR module count,
@@ -75,8 +81,9 @@ Preview the site at the project path:
 /usr/bin/python3 -m http.server 4173 --directory ..
 ```
 
-Open both `http://localhost:4173/jcx_biz_card/junchen-xiong/` and
-`http://localhost:4173/jcx_biz_card/sven-shi/` and check a narrow phone width,
+Open `http://localhost:4173/jcx_biz_card/junchen-xiong/`,
+`http://localhost:4173/jcx_biz_card/sven-shi/`, and
+`http://localhost:4173/jcx_biz_card/michael-luxenberg/`. Check a narrow phone width,
 the scroll response, the reduced-motion setting, the HubSpot invitation, all
 three contact actions, and both QR codes. Test the
 vCard download and Contacts import on a real phone. After you push, check the live page and
@@ -93,4 +100,4 @@ file was generated with:
 sips -s format png -z 64 64 assets/icons/favicon.svg --out assets/icons/bankuity-symbol-64.png
 ```
 
-The README intentionally stays short and links directly to both cards.
+The README intentionally stays short and links directly to all cards.

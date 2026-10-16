@@ -437,6 +437,9 @@ a {
   .intro h1 {
     font-size: 58px;
   }
+  .intro h1.long-name {
+    font-size: clamp(51px, 16vw, 58px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
